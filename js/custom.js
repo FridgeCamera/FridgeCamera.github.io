@@ -1,8 +1,8 @@
 (function($) {
     "use strict";
-
+	
 	/* ..............................................
-	   Loader
+	   Loader 
 	   ................................................. */
 	$(window).on('load', function() {
 		$('.preloader').fadeOut();
@@ -107,6 +107,34 @@
 		$('[data-toggle="tooltip"]').tooltip();
 	});
 
+	/* ..............................................
+	   Owl Carousel Instagram Feed
+	   ................................................. */
+
+	$('.main-instagram').owlCarousel({
+		loop: true,
+		margin: 0,
+		dots: false,
+		autoplay: true,
+		autoplayTimeout: 3000,
+		autoplayHoverPause: true,
+		navText: ["<i class='fas fa-arrow-left'></i>", "<i class='fas fa-arrow-right'></i>"],
+		responsive: {
+			0: {
+				items: 2,
+				nav: true
+			},
+			600: {
+				items: 3,
+				nav: true
+			},
+			1000: {
+				items: 5,
+				nav: true,
+				loop: true
+			}
+		}
+	});
 
 	/* ..............................................
 	   Featured Products
@@ -183,6 +211,6 @@
 	$(".brand-box").niceScroll({
 		cursorcolor: "#9b9b9c",
 	});
-
-
+	
+	
 }(jQuery));
